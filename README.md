@@ -1,5 +1,13 @@
 # MyToken — a simple ERC-20 token
 
+> Educational Hardhat project demonstrating an owner-controlled mint function
+> and holder-controlled burning.
+
+## Status
+
+Complete learning project. It is not audited and should not be used with real
+funds without an independent security review.
+
 A basic ERC-20 token contract with owner-controlled minting and open burning,
 built as a first hands-on Solidity project.
 
@@ -26,11 +34,19 @@ before moving on to more complex contracts (multisig wallets, escrow, staking).
 
 ## How to run it
 
+Requirements: Node.js 20 or newer and npm.
+
 ```bash
 npm install
 npm run compile
 npm test
 ```
+
+## Contract API
+
+- `constructor(initialSupply)` — mints the initial whole-token supply to the deployer.
+- `mint(to, amount)` — owner-only minting in whole tokens.
+- `burn(amount)` — burns whole tokens from the caller's balance.
 
 ## Test coverage
 
